@@ -1,0 +1,16 @@
+from urllib.parse import urlparse
+
+url = "https://www.instagram.com/stories/user/ID
+
+def isURL(url):
+    result = urlparse(url)
+    if all(result[0:3]):
+        return ''.join(result[1:3])
+    else:
+        return False
+    
+def userfromURL(url):
+    url = isURL(url)
+    if url == False:
+        return False
+    
